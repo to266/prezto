@@ -11,3 +11,31 @@ if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
 fi
 
 # Customize to your needs...
+
+export EDITOR="nvim"
+export VISUAL="$EDITOR"
+export SYSTEMD_EDITOR="$EDITOR"
+
+# export FZF_DEFAULT_COMMAND='rg -u --files '
+export FZF_DEFAULT_COMMAND='fd -HI --follow --exclude ".git" --type f'
+export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+export PATH=/home/to266/.cargo/bin:$PATH
+# export PATH=/home/to266/conda/bin:$PATH
+
+
+# if [[ -z "$TMUX" ]] ;then
+    # ID="$( tmux ls | grep -vm1 attached | cut -d: -f1 )" # get the id of a deattached session
+    # if [[ -z "$ID" ]] ;then # if not available create a new one
+        # tmux new-session
+    # else
+        # tmux attach-session -t "$ID" # if available attach to it
+    # fi
+# fi
+
+autoload -Uz zmv
+alias ls=exa
+alias la=ll -a
+alias cat=bat
