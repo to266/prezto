@@ -38,5 +38,4 @@ export PATH=/home/to266/.cargo/bin:$PATH
 autoload -Uz zmv
 alias ls=exa
 alias la=ll -a
-alias cat=bat
 alias vim=nvim
