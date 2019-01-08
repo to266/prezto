@@ -39,3 +39,4 @@ autoload -Uz zmv
 alias ls=exa
 alias la=ll -a
 alias cat=bat
+alias vim=nvim
