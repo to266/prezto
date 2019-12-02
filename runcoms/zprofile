@@ -26,6 +26,7 @@ fi
 if [[ -z "$PAGER" ]]; then
   export PAGER='less'
 fi
+
 #
 # Language
 #
@@ -48,8 +49,15 @@ typeset -gU cdpath fpath mailpath path
 
 # Set the list of directories that Zsh searches for programs.
 path=(
+<<<<<<< HEAD
   ~/bin
+||||||| parent of 94e7755 (Some updates)
+=======
+  ~/.cargo/bin
+  ~/bin
+>>>>>>> 94e7755 (Some updates)
   /usr/local/{bin,sbin}
+  ~/.garden/bin
   $path
 )
 

@@ -24,6 +24,7 @@ export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 
 export PATH=/home/to266/.cargo/bin:$PATH
 export PATH=/home/to266/.garden/bin:$PATH
+export PATH=/home/tomas/.poetry/bin:$PATH
 # export PATH=/home/to266/conda/bin:$PATH
 
 
@@ -40,3 +41,8 @@ autoload -Uz zmv
 alias ls=exa
 alias la=ll -a
 alias vim=nvim
+alias tree=exa -T
+
+
+source <(kubectl completion zsh)
+
