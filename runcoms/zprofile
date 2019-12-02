@@ -19,7 +19,6 @@ fi
 
 export EDITOR='nvim'
 export VISUAL='nvim'
-export PAGER='bat'
 
 #
 # Language
@@ -43,7 +42,10 @@ typeset -gU cdpath fpath mailpath path
 
 # Set the list of directories that Zsh searches for programs.
 path=(
+  ~/.cargo/bin
+  ~/bin
   /usr/local/{bin,sbin}
+  ~/.garden/bin
   $path
 )
 
