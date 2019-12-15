@@ -43,6 +43,7 @@ typeset -gU cdpath fpath mailpath path
 path=(
   ~/bin
   /usr/local/{bin,sbin}
+  ~/.garden/bin
   $path
 )
 
