@@ -23,6 +23,7 @@ export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 export PATH=/home/to266/.cargo/bin:$PATH
+export PATH=/home/to266/.garden/bin:$PATH
 # export PATH=/home/to266/conda/bin:$PATH
 
 
