@@ -38,10 +38,11 @@ zstyle ':prezto:load' pmodule \
   'spectrum' \
   'utility' \
   'completion' \
-  'history-substring-search' \
   'contrib-prompt' \
   'prompt' \
   'tmux'
+  'history-substring-search' \
+  'prompt'
 
 #
 # Autosuggestions
