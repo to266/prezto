@@ -44,33 +44,7 @@ export PATH=~/.poetry/bin:$PATH
 # fi
 
 #### zoxide
-_zoxide_precmd() {
-    zoxide add
-}
-
-[[ -n "${precmd_functions[(r)_zoxide_precmd]}" ]] || {
-    precmd_functions+=(_zoxide_precmd)
-}
-
-z() {
-    if [ $# -ne 0 ]; then
-        _Z_RESULT=$(zoxide query "$@")
-        case $_Z_RESULT in
-            "query: "*)
-                cd "${_Z_RESULT:7}"
-                ;;
-            *)
-                echo "${_Z_RESULT}"
-                ;;
-        esac
-    fi
-}
-
-alias zi="z -i"
-
-alias za="zoxide add"
-alias zq="zoxide query"
-alias zr="zoxide remove"
+eval "$(zoxide init zsh)"
 #### /zoxide
 
 autoload -Uz zmv
@@ -93,6 +67,13 @@ export PGO_APISERVER_URL='https://127.0.0.1:8443'
 
 source <(kubectl completion zsh)
 source <(k3d completion zsh)
+
+# Pyenv things
+export PATH=$(pyenv root)/shims:$PATH
+eval "$(pyenv init -)"
+
+# LinkerD
+export PATH=$PATH:/home/tomas/.linkerd2/bin
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
