@@ -66,7 +66,6 @@ export PGO_CLIENT_KEY=/home/tomas/.pgo/pgo/client.key
 export PGO_APISERVER_URL='https://127.0.0.1:8443'
 
 source <(kubectl completion zsh)
-source <(k3d completion zsh)
 
 # Pyenv things
 export PATH=$(pyenv root)/shims:$PATH
