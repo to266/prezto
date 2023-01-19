@@ -49,15 +49,12 @@ typeset -gU cdpath fpath mailpath path
 
 # Set the list of directories that Zsh searches for programs.
 path=(
-<<<<<<< HEAD
-  ~/bin
-||||||| parent of 94e7755 (Some updates)
-=======
   ~/.cargo/bin
-  ~/bin
->>>>>>> 94e7755 (Some updates)
-  /usr/local/{bin,sbin}
   ~/.garden/bin
+  /usr/local/{bin,sbin}
+  $HOME/{,s}bin(N)
+  /opt/{homebrew,local}/{,s}bin(N)
+  /usr/local/{,s}bin(N)
   $path
 )
 
