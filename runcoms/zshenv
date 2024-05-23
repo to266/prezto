@@ -10,5 +10,8 @@ if [[ ( "$SHLVL" -eq 1 && ! -o LOGIN ) && -s "${ZDOTDIR:-$HOME}/.zprofile" ]]; t
   source "${ZDOTDIR:-$HOME}/.zprofile"
 fi
 
+LUMINOVO_NUM_CPUS="8"
+LUMINOVO_RUST_TOOLCHAIN="nightly"
+
 # eval "$(pyenv init -)"
 # eval "$(pyenv virtualenv-init -)"
